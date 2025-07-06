@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barber So</title>
+	
+	<link href="https://fonts.googleapis.com/css2!family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+	
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000; /* noir */
+      color: #fff;
+   }
+
+    .banner {
+      background-color: #960000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .banner-title {
+      font-size: 2rem;
+      text-align: center;
+      flex: 1;
+	  font-family: 'Playfair Display', serif;
+		font-weight: 900;
+    }
+
+    .banner-logo {
+      width: 120px;
+      height: auto;
+    }
+
+    .banner-left, .banner-right {
+      width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .intro {
+      margin: 30px 20px 10px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .shops {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 20px;
+      gap: 20px;
+    }
+
+    .shop {
+      background-color: #000;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      flex: 1 1 30%;
+      max-width: 300px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .shop:hover {
+      transform: scale(1.03);
+    }
+
+    .shop img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+      .shops {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .shop {
+        width: 90%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="banner">
+    <div class="banner-left">
+      <img src="img/poteau.jpg" alt="Barber pole" class="banner-logo">
+    </div>
+    <div class="banner-title"> <p>BARBER   SO</p> <p>- Barber Shop -</p></div>
+    <div class="banner-right">
+      <img src="img/poteau.jpg" alt="Barber pole" class="banner-logo">
+    </div>
+  </header>
+
+  <p class="intro">Pour prendre rendez-vous, cliquez sur le magasin de votre choix :</p>
+
+  <div class="shops">
+    <!-- Bloc 1 -->
+    <a href="https://www.planity.com/barber-so-62000-arras" class="shop">
+      <h3>ARRAS</h3>
+      <img src="img/so1.JPG" alt="Photo 1">
+      <p>13 rue aux ours</p>
+	  	<p>62000 Arras</p>
+    </a>
+
+    <!-- Bloc 2 -->
+    <a href="https://www.planity.com/barber-so-62000-arras-d5y" class="shop">
+      <h3>ARRAS</h3>
+      <img src="img/so1.JPG" alt="Photo 2">
+      <p>18 rue de la Housse</p>
+		<p>62000 Arras</p>
+    </a>
+
+    <!-- Bloc 3 -->
+    <a href="https://www.planity.com/barber-so-vip-82000-amiens" class="shop">
+      <h3>AMIENS</h3>
+      <img src="img/so1.JPG" alt="Photo 3">
+      <p>67 place René Goblet</p>
+		<p>80000 Arras</p>
+    </a>
+  </div>
+
+</body>
+</html>
+
