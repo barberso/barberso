@@ -4,44 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barber So</title>
-	
-	<link href="https://fonts.googleapis.com/css2!family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
-	
+
+  <!-- Police Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #000; /* noir */
       color: #fff;
-   }
+    }
 
     .banner {
       background-color: #000;
       color: #fff;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 20px 20px;
+      text-align: center;
     }
 
     .banner-title {
-      font-size: 2rem;
-      text-align: center;
-      flex: 1;
-	  font-family: 'Playfair Display', serif;
-		font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
     }
 
-    .banner-logo {
-      width: 120px;
-      height: auto;
+    .banner-title h1 {
+      font-size: 3rem;
+      margin: 0;
     }
 
-    .banner-left, .banner-right {
-      width: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .banner-title p {
+      font-size: 1.5rem;
+      margin: 0;
     }
 
     .intro {
@@ -74,6 +68,7 @@
 
     .shop:hover {
       transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     }
 
     .shop img {
@@ -93,18 +88,23 @@
         width: 90%;
         max-width: 100%;
       }
+
+      .banner-title h1 {
+        font-size: 2rem;
+      }
+
+      .banner-title p {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header class="banner">
-    <div class="banner-left">
-      <img src="img/poteau.jpg" alt="Barber pole" class="banner-logo">
-    </div>
-    <div class="banner-title"> <p>BARBER   SO</p> <p>- Barber Shop -</p></div>
-    <div class="banner-right">
-      <img src="img/poteau.jpg" alt="Barber pole" class="banner-logo">
+    <div class="banner-title">
+      <h1>BARBER SO</h1>
+      <p>- Barber Shop -</p>
     </div>
   </header>
 
@@ -113,26 +113,26 @@
   <div class="shops">
     <!-- Bloc 1 -->
     <a href="https://www.planity.com/barber-so-62000-arras" class="shop">
-      <h3>ARRAS</h3>
-      <img src="img/so1.JPG" alt="Photo 1">
+      <h3>ARRAS - Rue aux Ours</h3>
+      <img src="img/so1.JPG" alt="Photo du salon Barber So à Arras, rue aux Ours">
       <p>13 rue aux ours</p>
-	  	<p>62000 Arras</p>
+      <p>62000 Arras</p>
     </a>
 
     <!-- Bloc 2 -->
     <a href="https://www.planity.com/barber-so-62000-arras-d5y" class="shop">
-      <h3>ARRAS</h3>
-      <img src="img/so1.JPG" alt="Photo 2">
+      <h3>ARRAS - Rue de la Housse</h3>
+      <img src="img/so1.JPG" alt="Photo du salon Barber So à Arras, rue de la Housse">
       <p>18 rue de la Housse</p>
-		<p>62000 Arras</p>
+      <p>62000 Arras</p>
     </a>
 
     <!-- Bloc 3 -->
     <a href="https://www.planity.com/barber-so-vip-80000-amiens" class="shop">
-      <h3>AMIENS</h3> 
-      <img src="img/so1.JPG" alt="Photo 3">
+      <h3>AMIENS</h3>
+      <img src="img/so1.JPG" alt="Photo du salon Barber So à Amiens">
       <p>67 place René Goblet</p>
-		<p>80000 Amiens</p>
+      <p>80000 Amiens</p>
     </a>
   </div>
 
