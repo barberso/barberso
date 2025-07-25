@@ -153,6 +153,46 @@
       <p>De 09H30 à 19H00</p>
     </a>
   </div>
+
+<div class="slideshow">
+  <img src="img/so4.JPG" class="slide" alt="Salon Arras 1">
+  <img src="img/so5.jpeg" class="slide" alt="Salon Arras 1">
+  <img src="img/so6.jpeg" class="slide" alt="Salon Arras 2">
+  <img src="img/so7.jpeg" class="slide" alt="Salon Arras 2">
+  <img src="img/so8.jpeg" class="slide" alt="Salon Arras 2">
+  <img src="img/so9.jpeg" class="slide" alt="Salon Amiens">
+  <img src="img/so10.jpeg" class="slide" alt="Salon Amiens">
+  <img src="img/so11.jpeg" class="slide" alt="Salon Amiens">
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlides() {
+    slides.forEach(slide => slide.style.display = "none");
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].style.display = "block";
+    setTimeout(showSlides, 3000); // 3 secondes
+  }
+
+  slides[0].style.display = "block";
+  setTimeout(showSlides, 3000);
+</script>
+
+<style>
+  .slideshow {
+    max-width: 600px;
+    margin: 30px auto;
+  }
+
+  .slide {
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+  }
+</style>
+  
 <footer style="text-align: center; margin: 30px 0; font-size: 1rem;">
   <p>Suivez-nous sur 
     <a href="https://www.instagram.com/barber_so__/" target="_blank" style="color: #fff; text-decoration: underline;">
