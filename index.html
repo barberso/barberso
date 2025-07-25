@@ -120,9 +120,7 @@
       <img src="img/so1.JPG" alt="Photo du salon Barber So à Arras, rue aux Ours">
       <p>13 rue aux ours</p>
       <p>62000 Arras</p>
-      <p> </p>
-      <p> </p>
-      <p>Horaire:</p>
+      <p style="margin-top: 20px;">Horaire:</p>
       <p>Du lundi au samedi</p>
       <p>De 10H00 à 19H00</p>
     </a>
@@ -133,9 +131,7 @@
       <img src="img/so2.jpeg" alt="Photo du salon Barber So à Arras, rue de la Housse">
       <p>18 rue de la Housse</p>
       <p>62000 Arras</p>
-      <p> </p>
-      <p> </p>
-      <p>Horaire:</p>
+      <p style="margin-top: 20px;">Horaire:</p>
       <p>Du lundi au samedi</p>
       <p>De 09H00 à 19H00</p>
     </a>
@@ -146,9 +142,7 @@
       <img src="img/so3.jpeg" alt="Photo du salon Barber So à Amiens">
       <p>67 place René Goblet</p>
       <p>80000 Amiens</p>
-      <p> </p>
-      <p> </p>
-      <p>Horaire:</p>
+      <p style="margin-top: 20px;">Horaire:</p>
       <p>Du lundi au samedi</p>
       <p>De 09H30 à 19H00</p>
     </a>
@@ -172,27 +166,43 @@
   const slides = document.querySelectorAll(".slide");
 
   function showSlides() {
-    slides.forEach(slide => slide.style.display = "none");
+    slides.forEach(slide => {
+      slide.classList.remove("active");
+    });
+
     slideIndex = (slideIndex + 1) % slides.length;
-    slides[slideIndex].style.display = "block";
-    setTimeout(showSlides, 3000); // 3 secondes
+    slides[slideIndex].classList.add("active");
+
+    setTimeout(showSlides, 3000);
   }
 
-  slides[0].style.display = "block";
+  slides[0].classList.add("active");
   setTimeout(showSlides, 3000);
 </script>
 
 <style>
-  .slideshow {
-    max-width: 600px;
-    margin: 30px auto;
-  }
-
   .slide {
-    width: 100%;
-    display: none;
-    border-radius: 10px;
-  }
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.slideshow {
+  max-width: 600px;
+  margin: 30px auto;
+  position: relative;
+  height: auto;
+}
 </style>
   
 <footer style="text-align: center; margin: 30px 0; font-size: 1rem;">
