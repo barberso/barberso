@@ -161,6 +161,51 @@
   <img src="img/so11.jpg" class="slide" alt="Salon Amiens">
 </div>
 
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlides() {
+    slides.forEach(slide => {
+      slide.classList.remove("active");
+    });
+
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].classList.add("active");
+
+    setTimeout(showSlides, 3000);
+  }
+
+  slides[0].classList.add("active");
+  setTimeout(showSlides, 3000);
+</script>
+
+<style>
+  .slide {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.slideshow {
+  max-width: 600px;
+  margin: 30px auto;
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+</style>
+
+  
 <h2 style="text-align: center; font-family: 'Playfair Display'; font-size: 1.5rem; margin-top: 40px;">Vous et Nous!</h2>
   
 <div class="slideshow">
@@ -257,6 +302,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
